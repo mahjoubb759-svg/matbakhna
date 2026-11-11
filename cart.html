@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>سلة المشتريات - MATBAKHNA</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+<a href="index.html" class="logo">MATBAKHNA<span>.</span></a>
+<nav>
+<a href="index.html">الرئيسية</a>
+<a href="food.html">المأكولات</a>
+<a href="desserts.html">الحلويات</a>
+<a href="drinks.html">المشروبات</a>
+</nav>
+</header>
+
+<section class="section">
+
+<h2>🛒 سلة المشتريات</h2>
+
+<div id="cart-items"></div>
+
+<div class="info-box">
+<h3>المجموع: <span id="total">0</span> درهم</h3>
+<br>
+<button class="button" onclick="clearCart()">إفراغ السلة</button>
+<br><br>
+<a href="#checkout" class="button">إتمام الطلب</a>
+</div>
+
+</section>
+
+<section class="section" id="checkout">
+
+<h2>إتمام الطلب</h2>
+
+<form onsubmit="submitOrder(event)">
+
+<label>الاسم الكامل</label>
+<input id="customer-name" required>
+
+<label>رقم الهاتف</label>
+<input id="customer-phone" type="tel" required>
+
+<label>العنوان</label>
+<textarea id="customer-address" required></textarea>
+
+<button class="button" type="submit">تأكيد الطلب</button>
+
+</form>
+
+</section>
+
+<footer>MATBAKHNA</footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>
